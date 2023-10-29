@@ -1,5 +1,5 @@
-Repository containing the scripts used for assembly and analysis for the 
-<i>Zasmidium syzygii</i> genome assembly.
+Repository containing the scripts used for assembly and analysis of the 
+<i>Zasmidium syzygii</i> genome.
 
 - Snakefile: 
 
