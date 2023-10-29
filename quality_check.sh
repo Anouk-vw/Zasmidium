@@ -1,8 +1,18 @@
+"""
+Script to check the genome assembly
+"""
+
 genome='P124'
 genome_assembly='path/to/genomeassembly/'
 Illumina_reads='path/to/reads'
 short_read_bam='path/to/shortreadbam/'
 blast_db='path/to/blastdb/'
+
+#QUAST (assembly statistics)
+quast -r ${genome_assembly} -o quast_${genome} -t 4
+
+#BUSCO (assembly completeness)
+busco -i ${genome_assembly} -m geno -l pezizomycotina_odb10 -o Busco_${genome} --cpu 5
 
 #Predict genome size Jellyfish doi:10.1093/bioinformatics/btr011
 jellyfish count -C -m 21 -s 1000000 -t 4 ${Illumina_reads} -o ${genome}.jf
