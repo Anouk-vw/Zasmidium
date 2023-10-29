@@ -4,7 +4,7 @@ Repository containing the scripts used for assembly and analysis of the
 - Snakefile: 
 
 	Script to create the genome assembly from Nanopore long reads. Prepares 
-	all files for teleoclip to manually inspect hints for missing telomeres.
+	all files for teleoclip to manually inspect missing telomeres.
 - annotate.sh:
 
 	Script to annotate the genome assembly
